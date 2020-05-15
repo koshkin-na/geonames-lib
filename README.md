@@ -1,6 +1,7 @@
 # Rust GeoNames.org Reader #
 
 Library for reading format geonames
+https://www.geonames.org/
 
 ## Usage ##
 
