@@ -1,0 +1,18 @@
+[package]
+name = "geonames-lib"
+version = "0.1.0"
+authors = ["Nikolay Koshkin <koshkin.kna@gmail.com>"]
+description = "Library for reading format geonames"
+repository = "https://github.com/koshkin-na/geonames-lib"
+license = "MIT"
+readme = "README.md"
+categories = ["database"] # https://crates.io/category_slugs
+keywords = ["geonames"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+derive_more = "0.99.5"
+rust_decimal = { version = "1.5.0"}
+chrono = { version = "0.4", features = ["serde"] }
