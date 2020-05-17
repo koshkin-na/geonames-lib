@@ -9,7 +9,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-geonames-lib = "0.1"
+geonames-lib = "0.2.0"
 ```
 Code:
 

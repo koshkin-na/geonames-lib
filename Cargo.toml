@@ -1,6 +1,6 @@
 [package]
 name = "geonames-lib"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Nikolay Koshkin <koshkin.kna@gmail.com>"]
 description = "Library for reading format geonames"
 repository = "https://github.com/koshkin-na/geonames-lib"
