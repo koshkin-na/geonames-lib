@@ -9,7 +9,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-geonames-lib = "0.2.0"
+geonames-lib = "0.3.0"
 ```
 Code:
 
@@ -33,6 +33,13 @@ fn main() {
         println!("{:#?}", geo_name);
         if index > 20 {
             break;
+        }
+    }
+    for (index, line) in BufReader::new(File::open("admin1CodesASCII.txt").unwrap()).lines().enumerate() {
+        let admin_code = AdminCode::deserialize_from_string(&line.unwrap()).unwrap();
+        println!("{:#?}", admin_code);
+        if index > 20 {
+          break;
         }
     }
 }

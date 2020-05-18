@@ -1,10 +1,17 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
-use geonames_lib::model::{AlternateName, GeoName};
-
+use geonames_lib::model::{AlternateName, GeoName, AdminCode};
 
 
 fn main() {
+    for (index, line) in BufReader::new(File::open("./test-data/admin1CodesASCII.txt").unwrap()).lines().enumerate() {
+        let admin_code = AdminCode::deserialize_from_string(&line.unwrap()).unwrap();
+        println!("{:#?}", admin_code);
+        if index > 20 {
+            break;
+        }
+    }
+
     for (index, line) in BufReader::new(File::open("./test-data/alternate_name_gb.txt").unwrap()).lines().enumerate() {
         let alternate_name = AlternateName::deserialize_from_string(&line.unwrap()).unwrap();
         println!("{:#?}", alternate_name);
